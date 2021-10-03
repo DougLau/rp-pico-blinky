@@ -1,0 +1,26 @@
+[package]
+name = "rp-pico-blinky"
+version = "0.1.0"
+edition = "2018"
+resolver = "2"
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+embedded-hal = { version = "0.2", features=["unproven"] }
+embedded-time = "0.12"
+panic-halt = "0.2"
+rp2040-hal = { git = "https://github.com/rp-rs/rp-hal", branch="main", features=["rt"] }
+rp2040-boot2 = { git = "https://github.com/rp-rs/rp2040-boot2-rs", branch="main" }
+
+[profile.dev]
+codegen-units = 1
+debug = 2
+incremental = false
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+incremental = false
+opt-level = 3
+lto = 'fat'
