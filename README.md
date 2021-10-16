@@ -14,9 +14,8 @@ cargo install elf2uf2-rs
 
 ## Running
 
-```
-cargo build --release
-elf2uf2-rs ./target/thumbv6m-none-eabi/release/rp-pico-blinky
-```
+Reset the Pico while pressing the BOOTSEL button, then:
 
-Then, copy `rp-pico-blinky.uf2` to a mounted Pico.
+```
+cargo run --release
+```
