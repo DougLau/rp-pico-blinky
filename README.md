@@ -11,3 +11,12 @@ dnf install arm-none-eabi-newlib
 rustup target install thumbv6m-none-eabi
 cargo install --git https://github.com/rp-rs/probe-run --branch main
 ```
+
+## Running
+
+```
+cargo build --release
+elf2uf2-rs ./target/thumbv6m-none-eabi/release/rp-pico-blinky
+```
+
+Then, copy `rp-pico-blinky.uf2` to a mounted Pico.
