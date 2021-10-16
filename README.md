@@ -9,7 +9,7 @@ dnf install libusb-devel
 dnf install arm-none-eabi-gcc-cs
 dnf install arm-none-eabi-newlib
 rustup target install thumbv6m-none-eabi
-cargo install --git https://github.com/rp-rs/probe-run --branch main
+cargo install elf2uf2-rs
 ```
 
 ## Running
